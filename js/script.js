@@ -1,86 +1,52 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const PRODUCTS_PER_PAGE = 9;
-  let currentPage = 1;
-  let currentCategory = "Main";
-
-  fetch('products.json')
+  // Load JSON data and initialize
+  fetch("data.json")
     .then(response => response.json())
     .then(data => {
-      createMenu(Object.keys(data));
-      displayProducts(data[currentCategory], currentPage, PRODUCTS_PER_PAGE);
-      createPagination(data[currentCategory].length, PRODUCTS_PER_PAGE, data[currentCategory]);
+      const sheetNames = Object.keys(data); // Get sheet names
+      generateMenu(sheetNames); // Create dynamic menu
+      loadPage(sheetNames[0], data); // Load the first sheet by default
     })
-    .catch(error => console.error('Error loading products:', error));
-
-  function createMenu(categories) {
-    const menu = document.getElementById('menu');
-    menu.innerHTML = '';
-
-    categories.forEach(category => {
-      const menuItem = document.createElement('li');
-      menuItem.textContent = category;
-      menuItem.className = category === currentCategory ? 'active' : '';
-      menuItem.addEventListener('click', () => {
-        currentCategory = category;
-        currentPage = 1;
-        fetch('products.json')
-          .then(response => response.json())
-          .then(data => {
-            displayProducts(data[currentCategory], currentPage, PRODUCTS_PER_PAGE);
-            createPagination(data[currentCategory].length, PRODUCTS_PER_PAGE, data[currentCategory]);
-            updateActiveMenu(category);
-          });
-      });
-      menu.appendChild(menuItem);
-    });
-  }
-
-  function updateActiveMenu(activeCategory) {
-    const menuItems = document.querySelectorAll('#menu li');
-    menuItems.forEach(item => item.classList.remove('active'));
-    menuItems.forEach(item => {
-      if (item.textContent === activeCategory) {
-        item.classList.add('active');
-      }
-    });
-  }
-
-  function displayProducts(products, page, limit) {
-    const container = document.getElementById('product-container');
-    container.innerHTML = '';
-
-    const start = (page - 1) * limit;
-    const end = start + limit;
-    const productsToShow = products.slice(start, end);
-
-    productsToShow.forEach(product => {
-      const productBox = document.createElement('div');
-      productBox.className = 'product-box';
-      productBox.innerHTML = `
-        <img src="${product.image}" alt="${product.name}">
-        <h2>${product.name}</h2>
-        <p>${product.description}</p>
-        <p class="price">${product.price}</p>
-        <a href="${product.link}" class="buy-now">Buy Now</a>
-      `;
-      container.appendChild(productBox);
-    });
-  }
-
-  function createPagination(totalItems, limit, products) {
-    const totalPages = Math.ceil(totalItems / limit);
-    const paginationContainer = document.getElementById('pagination-container');
-    paginationContainer.innerHTML = '';
-
-    for (let i = 1; i <= totalPages; i++) {
-      const pageButton = document.createElement('button');
-      pageButton.textContent = i;
-      pageButton.className = i === currentPage ? 'active' : '';
-      pageButton.addEventListener('click', () => {
-        currentPage = i;
-        displayProducts(products, currentPage, limit);
-      });
-      paginationContainer.appendChild(pageButton);
-    }
-  }
+    .catch(error => console.error("Error loading data:", error));
 });
+
+// Generate dynamic menu
+function generateMenu(sheetNames) {
+  const menu = document.getElementById("menu-items");
+  sheetNames.forEach((sheet, index) => {
+    const li = document.createElement("li");
+    li.textContent = sheet.charAt(0).toUpperCase() + sheet.slice(1); // Capitalize
+    li.onclick = () => loadPage(sheet, window.data);
+    if (index === 0) li.classList.add("active");
+    menu.appendChild(li);
+  });
+}
+
+// Load products for a specific sheet
+function loadPage(sheetName, data) {
+  // Store data globally for menu navigation
+  window.data = data;
+
+  // Highlight active menu item
+  document.querySelectorAll("#menu-items li").forEach(item => item.classList.remove("active"));
+  document.querySelector(`#menu-items li:nth-child(${Object.keys(data).indexOf(sheetName) + 1})`).classList.add("active");
+
+  // Get product data for the selected sheet
+  const products = data[sheetName];
+  const productContainer = document.getElementById("product-container");
+  productContainer.innerHTML = ""; // Clear current products
+
+  // Create product boxes
+  products.forEach(product => {
+    const productBox = document.createElement("div");
+    productBox.className = "product-box";
+    productBox.innerHTML = `
+      <img src="${product.image}" alt="${product.name}">
+      <h3>${product.name}</h3>
+      <p>${product.description}</p>
+      <p class="price">$${product.price}</p>
+      <a href="${product.link}" target="_blank">Buy Now</a>
+    `;
+    productContainer.appendChild(productBox);
+  });
+}
