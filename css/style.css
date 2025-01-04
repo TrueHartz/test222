@@ -19,32 +19,35 @@ body {
   color: white;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 0 20px;
+  justify-content: center;
   z-index: 1000;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 .top-bar .logo img {
-  max-height: 40px;
+  height: 40px;
+  margin-right: 10px;
 }
 
 .top-bar .site-name {
   font-size: 1.5em;
+  font-weight: bold;
   margin: 0;
+  display: flex;
+  align-items: center;
 }
 
-/* Side Menu */
+/* Floating Side Menu */
 .side-menu {
   position: fixed;
-  top: 60px; /* Below the top bar */
-  left: 0;
-  width: 200px;
-  height: calc(100vh - 60px);
-  background-color: #222;
-  padding: 10px 0;
-  overflow-y: auto;
-  box-shadow: 4px 0 6px rgba(0, 0, 0, 0.2);
+  top: 70px; /* Adjusted for top bar height */
+  left: 20px;
+  width: 150px;
+  background-color: rgba(50, 50, 50, 0.9);
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  z-index: 1000;
 }
 
 .side-menu ul {
@@ -54,13 +57,14 @@ body {
 }
 
 .side-menu li {
-  padding: 15px;
+  padding: 10px;
   text-align: center;
   cursor: pointer;
   background-color: #333;
   color: white;
-  margin: 5px;
+  margin: 5px 0;
   border-radius: 5px;
+  font-size: 0.9em;
 }
 
 .side-menu li:hover {
@@ -69,11 +73,12 @@ body {
 
 .side-menu li.active {
   background-color: #ff6600;
+  font-weight: bold;
 }
 
 /* Main Content */
 .main-content {
-  margin-left: 220px; /* Account for side menu */
+  margin-left: 200px; /* Account for side menu space */
   margin-top: 80px; /* Account for top bar */
   padding: 20px;
 }
@@ -128,7 +133,7 @@ body {
 footer {
   text-align: center;
   margin-top: 20px;
-  padding-bottom: 20px; /* Ensure space from the side menu */
+  padding-bottom: 20px;
 }
 
 footer hr {
