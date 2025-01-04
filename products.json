@@ -1,0 +1,16 @@
+[
+ {
+   "A": "img/product1.jpg",
+   "B": "Product 1",
+   "C": "Great product",
+   "D": 29.99,
+   "E": "#"
+ },
+ {
+   "A": "img/product2.jpg",
+   "B": "Product 2",
+   "C": "Another product",
+   "D": 39.99,
+   "E": "#"
+ }
+]
