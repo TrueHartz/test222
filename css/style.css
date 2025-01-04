@@ -113,3 +113,21 @@ footer hr {
   border: 1px solid #333333;
   margin: 20px 0;
 }
+.pagination-container {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.pagination-button {
+  margin: 0 5px;
+  padding: 5px 10px;
+  border: 1px solid #fff;
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+}
+
+.pagination-button.active {
+  background-color: #555;
+  font-weight: bold;
+}

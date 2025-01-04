@@ -12,5 +12,166 @@
         "description": "Another awesome product.",
         "price": "$39.99 ",
         "link": "https://example.com/2"
+    },
+    {
+        "image": "img/product2.jpg",
+        "name": "Product 3",
+        "description": "Another awesome product.",
+        "price": "$40.99 ",
+        "link": "https://example.com/3"
+    },
+    {
+        "image": "img/product2.jpg",
+        "name": "Product 4",
+        "description": "Another awesome product.",
+        "price": "$41.99 ",
+        "link": "https://example.com/4"
+    },
+    {
+        "image": "img/product2.jpg",
+        "name": "Product 5",
+        "description": "Another awesome product.",
+        "price": "$42.99 ",
+        "link": "https://example.com/5"
+    },
+    {
+        "image": "img/product2.jpg",
+        "name": "Product 6",
+        "description": "Another awesome product.",
+        "price": "$43.99 ",
+        "link": "https://example.com/6"
+    },
+    {
+        "image": "img/product2.jpg",
+        "name": "Product 7",
+        "description": "Another awesome product.",
+        "price": "$44.99 ",
+        "link": "https://example.com/7"
+    },
+    {
+        "image": "img/product2.jpg",
+        "name": "Product 8",
+        "description": "Another awesome product.",
+        "price": "$45.99 ",
+        "link": "https://example.com/8"
+    },
+    {
+        "image": "img/product2.jpg",
+        "name": "Product 9",
+        "description": "Another awesome product.",
+        "price": "$46.99 ",
+        "link": "https://example.com/9"
+    },
+    {
+        "image": "img/product2.jpg",
+        "name": "Product 10",
+        "description": "Another awesome product.",
+        "price": "$47.99 ",
+        "link": "https://example.com/10"
+    },
+    {
+        "image": "img/product2.jpg",
+        "name": "Product 11",
+        "description": "Another awesome product.",
+        "price": "$48.99 ",
+        "link": "https://example.com/11"
+    },
+    {
+        "image": "img/product2.jpg",
+        "name": "Product 12",
+        "description": "Another awesome product.",
+        "price": "$49.99 ",
+        "link": "https://example.com/12"
+    },
+    {
+        "image": "img/product2.jpg",
+        "name": "Product 13",
+        "description": "Another awesome product.",
+        "price": "$50.99 ",
+        "link": "https://example.com/13"
+    },
+    {
+        "image": "img/product2.jpg",
+        "name": "Product 14",
+        "description": "Another awesome product.",
+        "price": "$51.99 ",
+        "link": "https://example.com/14"
+    },
+    {
+        "image": "img/product2.jpg",
+        "name": "Product 15",
+        "description": "Another awesome product.",
+        "price": "$52.99 ",
+        "link": "https://example.com/15"
+    },
+    {
+        "image": "img/product2.jpg",
+        "name": "Product 16",
+        "description": "Another awesome product.",
+        "price": "$53.99 ",
+        "link": "https://example.com/16"
+    },
+    {
+        "image": "img/product2.jpg",
+        "name": "Product 17",
+        "description": "Another awesome product.",
+        "price": "$54.99 ",
+        "link": "https://example.com/17"
+    },
+    {
+        "image": "img/product2.jpg",
+        "name": "Product 18",
+        "description": "Another awesome product.",
+        "price": "$55.99 ",
+        "link": "https://example.com/18"
+    },
+    {
+        "image": "img/product2.jpg",
+        "name": "Product 19",
+        "description": "Another awesome product.",
+        "price": "$56.99 ",
+        "link": "https://example.com/19"
+    },
+    {
+        "image": "img/product2.jpg",
+        "name": "Product 20",
+        "description": "Another awesome product.",
+        "price": "$57.99 ",
+        "link": "https://example.com/20"
+    },
+    {
+        "image": "img/product2.jpg",
+        "name": "Product 21",
+        "description": "Another awesome product.",
+        "price": "$58.99 ",
+        "link": "https://example.com/21"
+    },
+    {
+        "image": "img/product2.jpg",
+        "name": "Product 22",
+        "description": "Another awesome product.",
+        "price": "$59.99 ",
+        "link": "https://example.com/22"
+    },
+    {
+        "image": "img/product2.jpg",
+        "name": "Product 23",
+        "description": "Another awesome product.",
+        "price": "$60.99 ",
+        "link": "https://example.com/23"
+    },
+    {
+        "image": "img/product2.jpg",
+        "name": "Product 24",
+        "description": "Another awesome product.",
+        "price": "$61.99 ",
+        "link": "https://example.com/24"
+    },
+    {
+        "image": "img/product2.jpg",
+        "name": "Product 25",
+        "description": "Another awesome product.",
+        "price": "$62.99 ",
+        "link": "https://example.com/25"
     }
 ]
