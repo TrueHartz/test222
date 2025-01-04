@@ -70,3 +70,7 @@ function loadPage(sheetName, data, currentPage) {
     paginationContainer.appendChild(pageButton);
   }
 }
+function toggleMenu() {
+  const sideMenu = document.getElementById("side-menu");
+  sideMenu.classList.toggle("open");
+}
