@@ -6,6 +6,7 @@ body {
   color: #fff;
 }
 
+/* Header */
 header {
   display: flex;
   justify-content: center;
@@ -29,6 +30,7 @@ header .site-name {
   color: #ff6600;
 }
 
+/* Side Menu */
 .side-menu {
   position: fixed;
   left: 0;
@@ -36,6 +38,7 @@ header .site-name {
   width: 250px;
   height: calc(100% - 60px);
   background-color: #333;
+  border-right: 2px solid #444; /* Add border for framing */
   overflow-y: auto;
   padding: 10px;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
@@ -67,126 +70,27 @@ header .site-name {
   font-weight: bold;
 }
 
-.main-content {
-  margin-left: 260px;
-  padding: 20px;
-  margin-top: 60px;
-}
-
-.product-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: space-between;
-}
-
-.product-box {
-  flex: 0 0 calc(33.333% - 20px); /* Three products per row */
-  background-color: #333;
-  padding: 10px;
-  border-radius: 10px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-  text-align: center;
-}
-
-.product-box img {
-  max-width: 100%;
-  border-radius: 10px;
-}
-
-.product-box h3 {
-  margin: 10px 0 5px;
-}
-
-.product-box .price {
-  font-weight: bold;
-  color: #ff6600;
-}
-
-.product-box a {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 5px 10px;
+/* Menu Button for Small Screens */
+.toggle-menu {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 2100;
   background-color: #ff6600;
-  color: #fff;
-  border-radius: 5px;
-  text-decoration: none;
-}
-
-.product-box a:hover {
-  background-color: #ff4500;
-}
-
-/* Pagination */
-.pagination-container {
-  text-align: center;
-  margin-top: 20px;
-}
-
-.page-number {
-  display: inline-block;
-  margin: 0 5px;
-  padding: 5px 10px;
-  font-size: 1em;
-  cursor: pointer;
-  background-color: #333;
   color: white;
-  border-radius: 5px;
-}
-
-.page-number:hover {
-  background-color: #444;
-}
-
-.page-number.active {
-  background-color: #ff6600;
-  font-weight: bold;
-}
-
-/* Footer */
-footer {
-  text-align: center;
   padding: 10px;
-  background-color: #333;
-  margin-top: 20px;
+  border-radius: 50%;
+  font-size: 1.2em;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
-footer hr {
-  border-color: #444;
-}
-
-/* Media Queries for Responsive Design */
-@media (max-width: 1024px) {
-  .product-box {
-    flex: 0 0 calc(50% - 20px); /* Two products per row */
-  }
-
-  .main-content {
-    margin-left: 220px;
-  }
-
-  .side-menu {
-    width: 200px;
-  }
-}
-
+/* Responsive Adjustments */
 @media (max-width: 768px) {
-  .product-box {
-    flex: 0 0 100%; /* One product per row */
-  }
-
-  .main-content {
-    margin-left: 0;
-  }
-
   .side-menu {
-    position: fixed;
-    width: 200px;
-    height: 100%;
-    top: 0;
     transform: translateX(-100%);
     transition: transform 0.3s ease;
-    z-index: 2000;
   }
 
   .side-menu.open {
@@ -194,52 +98,12 @@ footer hr {
   }
 
   .toggle-menu {
-    display: block;
-    position: fixed;
-    left: 10px;
-    top: 10px;
-    z-index: 2100;
-    background-color: #ff6600;
-    color: white;
-    padding: 5px 10px;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-}
-/* Center the tagline */
-.tagline {
-  text-align: center;
-  font-size: 1.2em;
-  margin: 20px 0;
-  color: #ffcc00; /* Optional: Add a pop of color */
-}
-
-/* Product Container: Adjust spacing between boxes */
-.product-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px; /* Equal spacing between boxes */
-  justify-content: space-evenly; /* Even spacing between rows */
-}
-
-.product-box {
-  flex: 0 0 calc(33.333% - 20px); /* Three boxes per row with space */
-  background-color: #333;
-  padding: 10px;
-  border-radius: 10px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-  text-align: center;
-}
-
-/* Responsive Adjustments */
-@media (max-width: 1024px) {
-  .product-box {
-    flex: 0 0 calc(50% - 20px); /* Two boxes per row */
+    display: block; /* Show menu button on small screens */
   }
 }
 
-@media (max-width: 768px) {
-  .product-box {
-    flex: 0 0 100%; /* One box per row */
+@media (min-width: 769px) {
+  .toggle-menu {
+    display: none; /* Hide menu button on larger screens */
   }
 }
