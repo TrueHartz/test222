@@ -139,3 +139,28 @@ footer {
 footer hr {
   border-color: #444;
 }
+/* Pagination */
+.pagination-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.page-number {
+  display: inline-block;
+  margin: 0 5px;
+  padding: 5px 10px;
+  font-size: 1em;
+  cursor: pointer;
+  background-color: #333;
+  color: white;
+  border-radius: 5px;
+}
+
+.page-number:hover {
+  background-color: #444;
+}
+
+.page-number.active {
+  background-color: #ff6600;
+  font-weight: bold;
+}
