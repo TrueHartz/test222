@@ -206,3 +206,40 @@ footer hr {
     cursor: pointer;
   }
 }
+/* Center the tagline */
+.tagline {
+  text-align: center;
+  font-size: 1.2em;
+  margin: 20px 0;
+  color: #ffcc00; /* Optional: Add a pop of color */
+}
+
+/* Product Container: Adjust spacing between boxes */
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Equal spacing between boxes */
+  justify-content: space-evenly; /* Even spacing between rows */
+}
+
+.product-box {
+  flex: 0 0 calc(33.333% - 20px); /* Three boxes per row with space */
+  background-color: #333;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .product-box {
+    flex: 0 0 calc(50% - 20px); /* Two boxes per row */
+  }
+}
+
+@media (max-width: 768px) {
+  .product-box {
+    flex: 0 0 100%; /* One box per row */
+  }
+}
