@@ -1,54 +1,115 @@
-/* General Body Style */
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f9;
+  font-family: Arial, sans-serif;
+  background-color: #121212;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
 }
 
+/* Header */
 header {
-    background-color: #4CAF50;
-    color: white;
-    padding: 1rem;
-    text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1f1f1f;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    text-align: center;
+header .logo img {
+  max-height: 40px;
+  margin-right: 15px;
 }
 
-nav ul li {
-    display: inline;
-    margin: 10px;
+header h1 {
+  font-size: 1.5rem;
 }
 
-nav ul li a {
-    color: #4CAF50;
-    text-decoration: none;
-    font-size: 18px;
+/* Tagline */
+.tagline {
+  text-align: center;
+  margin: 100px 0 20px;
+  font-size: 1.2rem;
+  color: #aaaaaa;
 }
 
-nav ul li a:hover {
-    text-decoration: underline;
+/* Product Layout */
+.product-container {
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 1200px;
+  overflow: auto;
 }
 
-/* Sections */
-section {
-    margin: 2rem;
-    padding: 1rem;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+.product-box {
+  float: left;
+  width: 30%;
+  margin: 1%;
+  background-color: #1e1e1e;
+  border-radius: 8px;
+  text-align: center;
+  padding: 15px;
+  transition: transform 0.3s;
 }
 
+.product-box:hover {
+  transform: scale(1.05);
+}
+
+.product-box img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.product-box h2 {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+.product-box p {
+  margin: 5px 0;
+}
+
+.product-box .price {
+  color: #00ff00;
+  font-weight: bold;
+}
+
+.buy-now {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.buy-now:hover {
+  background-color: #0056b3;
+}
+
+/* Footer */
 footer {
-    background-color: #4CAF50;
-    color: white;
-    padding: 1rem;
-    text-align: center;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+  text-align: center;
+  padding: 10px 20px;
+  background-color: #1f1f1f;
+  color: #aaaaaa;
+}
+
+footer hr {
+  border: 1px solid #333333;
+  margin: 20px 0;
 }
